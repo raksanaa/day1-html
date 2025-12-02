@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cricket Player Videos</title>
+    <style>
+        a.player-link {
+            font-size: 22px;
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: blue;
+            cursor: pointer;
+        }
+        a.player-link:hover {
+            text-decoration: underline;
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <!-- Normal Links -->
+    <a href="https://www.google.com" target="_blank">Open Google</a><br>
+    <a href="https://www.youtube.com" target="_blank">Open YouTube</a><br><br>
+     <!-- Image loaded from URL so it works in Live Server automatically -->
+    <img src="https://picsum.photos/500/300" width="500" alt="Online Image">
+
+<h2>Click a Player Name to Watch the Video</h2>
+
+<!-- Dhoni Link -->
+<a class="player-link" onclick="playVideo('https://www.youtube.com/embed/MR93QcFBVug')">
+    Dhoni
+</a>
+
+<!-- Virat Link -->
+<a class="player-link" onclick="playVideo('https://www.youtube.com/embed/cLiOWyMK_E8')">
+    Virat Kohli
+</a>
+
+<br><br>
+
+<!-- Video Player -->
+<iframe id="videoPlayer" width="1080" height="607" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+</iframe>
+
+<script>
+function playVideo(url) {
+    document.getElementById("videoPlayer").src = url;
+}
+</script>
+
+</body>
+</html>
