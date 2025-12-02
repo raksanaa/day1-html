@@ -15,6 +15,20 @@
             text-decoration: underline;
             color: darkred;
         }
+
+        /* Make sure the marquee stays at the bottom */
+        .bottom-marquee {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f0f0f0;
+            padding: 10px 0;
+        }
+
+        .bottom-marquee img {
+            width: 200px;
+            margin-right: 50px;
+        }
     </style>
 </head>
 <body>
@@ -41,6 +55,16 @@
 <!-- Video Player -->
 <iframe id="videoPlayer" width="1080" height="607" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 </iframe>
+
+<!-- Marquee scrolling image at the bottom -->
+<div class="bottom-marquee">
+    <marquee behavior="scroll" direction="left" scrollamount="12">
+        <img src="https://picsum.photos/200/150" alt="Scrolling Image">
+        <span style="font-size: 18px; margin: 0 30px; color: #333;">Cricket News & Updates</span>
+        <img src="https://picsum.photos/200/150?random=1" alt="Scrolling Image 2">
+        <span style="font-size: 18px; margin: 0 30px; color: #333;">Live Scores Available</span>
+    </marquee>
+</div>
 
 <script>
 function playVideo(url) {
